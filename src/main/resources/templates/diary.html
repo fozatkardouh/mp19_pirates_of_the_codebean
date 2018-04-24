@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <meta charset="UTF-8"/>
+    <title>Diary</title>
 </head>
 <body>
 <div class="container">
@@ -10,5 +10,8 @@
 </div>
 <h2 th:if="${curseLifted} == true">The curse has been lifted!</h2>
 <h2 th:if="${curseLifted} == false">The curse hasn’t been lifted yet!</h2>
+<form th:if="${curseLifted} == false" name="form" th:action="@{/diary}" method="POST">
+    <button type="submit">Lift The Curse</button>
+</form>
 </body>
 </html>
