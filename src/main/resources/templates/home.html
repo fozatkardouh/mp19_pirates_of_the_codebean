@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+</head>
+<body>
+<h2 th:if="${curseLifted} == true">The curse has been lifted!</h2>
+<h2 th:if="${curseLifted} == false">The curse hasn’t been lifted yet!</h2>
+</body>
+</html>
